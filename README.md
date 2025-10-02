@@ -1,21 +1,43 @@
-# FaceFit - AI-Powered Face Shape & Glasses Recommender
+# FaceFit 👓
 
-AI-powered system that analyzes facial geometry and recommends optimal glasses frames.
+AI-powered face shape analysis and glasses recommendation system.
 
-## Project Structure
-- **backend/** - Python AI engine with MediaPipe face detection
-- **frontend/** - React TypeScript web application (coming soon)
+**Upload photo → Get face shape → Receive glasses recommendations**
 
 ## Features
-- Face shape detection using Google's MediaPipe
-- Geometric analysis of 468 facial landmarks
-- Smart glasses recommendation system
+- MediaPipe face detection (468 landmarks)
+- 6 face shape categories
+- Smart glasses recommendations with confidence scores
+- Camera integration + drag-and-drop upload
 
 ## Tech Stack
-**Backend:** Python, MediaPipe, OpenCV, Flask
-**Frontend:** React, TypeScript, Next.js (planned)
+- **Backend:** Python, Flask, MediaPipe, OpenCV
+- **Frontend:** React, TypeScript, Tailwind CSS
 
-## Current Status
-Face shape detection working
-Building glasses recommendation logic
-Frontend development starting soon
+## Quick Start
+
+**Backend:**
+```bash
+git clone https://github.com/efuayankey/FaceFit.git
+cd FaceFit
+python3.12 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python backend/app.py
+```
+
+**Frontend:**
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Visit `http://localhost:3000`
+
+## API
+- `GET /health` - Health check
+- `POST /analyze` - Face analysis (multipart image upload)
+
+## License
+MIT
